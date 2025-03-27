@@ -1,3 +1,5 @@
+set relativenumber
+
 " Up/down/left/right
 nnoremap n h
 xnoremap n h
