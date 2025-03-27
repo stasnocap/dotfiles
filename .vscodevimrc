@@ -26,11 +26,9 @@ nnoremap h <PageDown>
 xnoremap j <PageUp>
 xnoremap h <PageDown>
 
-" Jumplist navigation
-nnoremap <C-u> <C-i>
-nnoremap <C-e> <C-o>
-vnoremap <C-u> <C-i>
-vnoremap <C-e> <C-o>
+" Half page navigation
+nnoremap U <C-u>zz
+nnoremap E <C-d>zz
 
 " Word left/right
 nnoremap l b
