@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+# Convert comma-separated string into an array
+IFS=',' read -ra FOLDERS <<< "$STOW_FOLDERS"
+
+# Change to the dotfiles directory
+DOTFILES="$HOME/dotfiles"
+cd "$DOTFILES" || { echo "Error: DOTFILES directory not found!"; exit 1; }
+
+# Loop through each folder and run stow
+for folder in "${FOLDERS[@]}"; do
+    echo "Stowing $folder..."
+    stow -D "$folder"
+    stow "$folder"
+done
+
+echo "All folders have been stowed!"
