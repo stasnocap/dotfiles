@@ -11,8 +11,6 @@ return {
       formatters_by_ft = {
         typescript = { "prettier" },
         javascript = { "prettier" },
-        typescriptreact = { "prettier" },
-        javascriptreact = { "prettier" },
       },
       formatters = {
         prettier = {
