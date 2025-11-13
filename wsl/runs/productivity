@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+# unzip?
+
+sudo pacman -S --noconfirm --needed \
+  zoxide eza stow tmux \
+  lazydocker btop

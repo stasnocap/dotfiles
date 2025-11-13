@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+./run
+
+stow -D omarchy
+stow omarchy
+
+# Define the folders
+export STOW_FOLDERS="bash,nvim,omarchy,omarchy-wsl,starship,tmux"
+
+../stow

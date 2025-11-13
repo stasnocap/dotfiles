@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+curl -LO https://dot.net/v1/dotnet-install.sh
+
+chmod +x ./dotnet-install.sh
+
+sudo ./dotnet-install.sh --install-dir /usr/share/dotnet -channel STS -version latest
+
+dotnet tool install --global dotnet-ef
+dotnet tool install --global dotnet-outdated-tool
+dotnet tool install --global dotnet-search
+
+rm ./dotnet-install.sh
+
+sudo ln -s /usr/share/dotnet/dotnet /usr/local/bin/dotnet
+
+echo "fs.inotify.max_user_instances=8192" | sudo tee -a /etc/sysctl.d/99-max-inotify.conf
+echo "fs.inotify.max_user_watches=1048576" | sudo tee -a /etc/sysctl.d/99-max-inotify.conf
+
