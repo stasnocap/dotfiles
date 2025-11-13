@@ -2,10 +2,9 @@
 
 ./run
 
-stow -D omarchy
-stow omarchy
+rm ~/.bash_logout ~/.bash_profile ~/.bashrc
 
 # Define the folders
-export STOW_FOLDERS="bash,nvim,omarchy,omarchy-wsl,starship,tmux"
+export STOW_FOLDERS="bash,nvim,omarchy,omarchy-local,starship,tmux"
 
 ../stow
