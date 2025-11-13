@@ -2,6 +2,6 @@
 
 # unzip?
 
-sudo pacman -S --noconfirm --needed \
+sudo pacman -S --noconfirm --needed starship \
   zoxide eza stow tmux \
   lazydocker btop
