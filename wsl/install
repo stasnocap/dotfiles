@@ -5,6 +5,8 @@
 mkdir ~/.local/share -p
 rm ~/.bash_logout ~/.bash_profile ~/.bashrc
 
+stow -d omarchy -t $HOME
+
 # Define the folders
 export STOW_FOLDERS="bash,nvim,omarchy,omarchy-local,starship,tmux"
 
