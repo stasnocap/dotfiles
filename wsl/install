@@ -2,6 +2,7 @@
 
 ./run
 
+mkdir ~/.local/share -p
 rm ~/.bash_logout ~/.bash_profile ~/.bashrc
 
 # Define the folders
