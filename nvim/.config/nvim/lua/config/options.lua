@@ -5,6 +5,10 @@ local o = vim.opt
 o.guicursor = "n-v-c-i-r-sm:block-blinkon250-blinkoff250"
 o.clipboard = ""
 
+o.swapfile = false
+o.backup = false
+o.writebackup = false
+
 local g = vim.g
 g.autoformat = false
 
