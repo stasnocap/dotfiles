@@ -1,7 +1,6 @@
 return {
   {
     "seblyng/roslyn.nvim",
-    ft = { "cs" },
     ---@module 'roslyn.config'
     ---@type RoslynNvimConfig
     opts = {
@@ -15,7 +14,7 @@ return {
   {
     "mason-org/mason.nvim",
     opts = {
-      ensure_installed = { "csharpier", "netcoredbg", "roslyn" },
+      ensure_installed = { "csharpier", "netcoredbg", "roslyn", "html-lsp" },
       registries = {
         "github:mason-org/mason-registry",
         "github:Crashdummyy/mason-registry",
