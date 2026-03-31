@@ -9,7 +9,7 @@ return {
   },
   {
     "nvim-treesitter/nvim-treesitter",
-    opts = { ensure_installed = { "c_sharp" } },
+    opts = { ensure_installed = { "c_sharp", "razor" } },
   },
   {
     "mason-org/mason.nvim",
