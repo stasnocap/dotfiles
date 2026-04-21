@@ -35,6 +35,7 @@ return {
     optional = true,
     opts = function()
       local dap = require("dap")
+      local dap_utils = require("dap.utils")
       if not dap.adapters["netcoredbg"] then
         require("dap").adapters["netcoredbg"] = {
           type = "executable",
@@ -57,6 +58,12 @@ return {
                 return vim.fn.input("Path to dll: ", vim.fn.getcwd() .. "/", "file")
               end,
               cwd = "${workspaceFolder}",
+            },
+            {
+              type = "coreclr",
+              name = "Attach",
+              request = "attach",
+              processId = dap_utils.pick_process,
             },
           }
         end
