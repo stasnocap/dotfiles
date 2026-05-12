@@ -21,10 +21,10 @@ return {
     }, ",")
 
     require("langmapper").setup({
-      default_layout = [[~QWFPB{JLUY"_ARSTG}MNEIO:ZXCDV?KH<>`qwfpb[jluy'-arstg]mneio;zxcdv/kh,.]],
+      default_layout = [[~QWFPB{JLUY"_ARSTG}MNEIO:ZXCDV?KH`qwfpb[jluy'-arstg]mneio;zxcdv/kh,.]],
       layouts = {
         ru = {
-          layout = "ЁЯЖФПБШЙЛУЫЬ_АРСТГЩМНЕИОЮЗХЦДВ?КЧ;:ёяжфпбшйлуыь-арстгщмнеиоюзхцдв/кч,.",
+          layout = "ЁЯЖФПБШЙЛУЫЬ_АРСТГЩМНЕИОЮЗХЦДВ?КЧёяжфпбшйлуыь-арстгщмнеиоюзхцдв/кч,.",
         },
       },
     })
