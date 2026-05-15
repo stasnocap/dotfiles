@@ -26,6 +26,8 @@ sudo pacman -S git
 
 WORK: git config --global http.sslVerify false
 
+WORK: echo "insecure" >> ~/.curlrc
+
 git clone https://github.com/stasnocap/dotfiles
 
 cd dotfiles/wsl
