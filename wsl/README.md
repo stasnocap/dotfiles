@@ -6,6 +6,7 @@ echo "LANG=en_US.UTF-8" | tee /etc/locale.conf
 
 
 WORK: echo "Server = http://mirror.rackspace.com/archlinux/\$repo/os/\$arch" > /etc/pacman.d/mirrorlist
+
 pacman -Sy --noconfirm \
     && pacman -S --noconfirm sudo
 
@@ -15,7 +16,7 @@ useradd -m -s /bin/bash stasnocap \
     && echo "%wheel ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
 
 echo -e "[user]\ndefault = stasnocap" > /etc/wsl.conf
-echo -e "[interop]\nappendWindowsPath = false" >> /etc/wsl.conf
+    && echo -e "[interop]\nappendWindowsPath = false" >> /etc/wsl.conf
 
 # REBOOT WSL
 
