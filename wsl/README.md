@@ -23,6 +23,9 @@ echo -e "[user]\ndefault = stasnocap" > /etc/wsl.conf
 cd
 
 sudo pacman -S git
+
+WORK: git config --global http.sslVerify false
+
 git clone https://github.com/stasnocap/dotfiles
 
 cd dotfiles/wsl
