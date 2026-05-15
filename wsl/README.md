@@ -4,6 +4,8 @@ sed -i 's/^#en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/' /etc/locale.gen && \
 locale-gen && \
 echo "LANG=en_US.UTF-8" | tee /etc/locale.conf
 
+
+WORK: echo "Server = http://mirror.rackspace.com/archlinux/\$repo/os/\$arch" > /etc/pacman.d/mirrorlist
 pacman -Sy --noconfirm \
     && pacman -S --noconfirm sudo
 
