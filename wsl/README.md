@@ -4,38 +4,35 @@ sed -i 's/^#en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/' /etc/locale.gen && \
 locale-gen && \
 echo "LANG=en_US.UTF-8" | tee /etc/locale.conf
 
-
-WORK: echo "Server = http://mirror.rackspace.com/archlinux/\$repo/os/\$arch" > /etc/pacman.d/mirrorlist
-
-pacman -Sy --noconfirm \
-    && pacman -S --noconfirm sudo
+pacman -Sy --noconfirm \\
+&& pacman -S --noconfirm sudo
 
 useradd -m -s /bin/bash stasnocap \
-    && echo "stasnocap:1" | chpasswd \
-    && usermod -aG wheel stasnocap \
-    && echo "%wheel ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
+ && echo "stasnocap:1" | chpasswd \
+ && usermod -aG wheel stasnocap \
+ && echo "%wheel ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
 
-echo -e "[user]\ndefault = stasnocap" > /etc/wsl.conf
-    && echo -e "[interop]\nappendWindowsPath = false" >> /etc/wsl.conf
+echo -e "[user]\ndefault = stasnocap" > /etc/wsl.conf \
+&& echo -e "[interop]\nappendWindowsPath = false" >> /etc/wsl.conf \
+&& echo -e "[boot]\nsystemd = false" >> /etc/wsl.conf
 
-# REBOOT WSL
+## REBOOT WSL
 
 cd
-
 sudo pacman -S git
-
-WORK: git config --global http.sslVerify false
-
-WORK: echo "insecure" >> ~/.curlrc
-
-git clone https://github.com/stasnocap/dotfiles
-
+git clone <https://github.com/stasnocap/dotfiles>
 cd dotfiles/wsl
-
 ./install
 
+## WORK
 
-# WORK
+### SSH
+
+ssh-keygen -t rsa -b 4096 -C "stasnocap@gmail.com"
+
+cat ~/.ssh/id_rsa.pub
+
+### Certificate
 
 tee /etc/ca-certificates/trust-source/anchors/fortinet-ca.crt <<'EOF'
 -----BEGIN CERTIFICATE-----
@@ -64,3 +61,12 @@ I93MQYXn9XScIJkVDHN97zmp3EFVNyj6WS1+1k+hO2xZbPTdQ2Zd+0je
 EOF
 
 trust extract-compat
+
+### Azure
+
+nano ~/.ssh/config
+
+Host ivc-adsp.ivcmf.by
+    HostkeyAlgorithms +ssh-rsa
+    PubkeyAcceptedAlgorithms +ssh-rsa
+
