@@ -8,7 +8,7 @@ sudo ./dotnet-install.sh --install-dir /usr/share/dotnet -channel STS -version l
 
 dotnet tool install --global dotnet-ef
 dotnet tool install --global dotnet-outdated-tool
-dotnet tool install --global dotnet-search
+dotnet tool install -g csharprepl --version 0.6.7
 
 rm ./dotnet-install.sh
 
