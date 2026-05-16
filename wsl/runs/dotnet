@@ -6,8 +6,9 @@ chmod +x ./dotnet-install.sh
 
 sudo ./dotnet-install.sh --install-dir /usr/share/dotnet -channel STS -version latest
 
-dotnet tool install --global dotnet-ef
-dotnet tool install --global dotnet-outdated-tool
+dotnet tool install -g dotnet-ef
+dotnet tool install -g dotnet-outdated-tool
+dotnet tool install -g Aspire.Cli
 dotnet tool install -g csharprepl --version 0.6.7
 
 rm ./dotnet-install.sh
