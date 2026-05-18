@@ -5,3 +5,4 @@ sudo pacman -S --needed --noconfirm git openssh
 git config --global user.name stasnocap
 git config --global user.email stasnocap@gmail.com
 git config --global core.editor nvim
+git config --global pull.rebase true
