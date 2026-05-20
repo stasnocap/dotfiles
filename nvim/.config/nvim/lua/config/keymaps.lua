@@ -155,4 +155,6 @@ for i = 1, 9 do
   )
 end
 
+vim.keymap.del({ "x", "o" }, "in")
+
 -- vim: ts=2 sts=2 sw=2 e
