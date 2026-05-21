@@ -4,4 +4,4 @@
 
 sudo pacman -S --noconfirm --needed starship \
   zoxide eza stow tmux \
-  lazydocker btop jq
+  lazydocker btop jq less
