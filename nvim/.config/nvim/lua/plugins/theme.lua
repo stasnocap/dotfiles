@@ -1,1 +1,1 @@
-/home/stasnocap/.config/omarchy/current/theme/neovim.lua
+/home/stasnocap/.local/state/omarchy/current/theme/neovim.lua
