@@ -2,10 +2,13 @@
 
 ./run
 
-mkdir ~/.local/share -p
 rm ~/.bash_logout ~/.bash_profile ~/.bashrc
 
-stow omarchy/ -t $HOME
+mkdir ~/.local/share -p
+stow omarchy-local/ -t $HOME
+
+sudo mkdir -p /usr/share/omarchy/
+sudo stow omarchy-default/ -t /usr/share/omarchy/
 
 # Define the folders
 export STOW_FOLDERS="bash,nvim,omarchy,starship,tmux"
