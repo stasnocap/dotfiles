@@ -20,3 +20,4 @@ source "$OMARCHY_PATH/default/bash/rc"
 # alias p='python'
 
 bind '"\C-f":"tmux-sessionizer\n"'
+. "$HOME/.cargo/env"

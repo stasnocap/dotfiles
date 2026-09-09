@@ -13,3 +13,4 @@ export DOTNET_CLI_TELEMETRY_OPTOUT=1
 export ASPIRE_CLI_TELEMETRY_OPTOUT=1
 
 [[ -f ~/.bashrc ]] && . ~/.bashrc
+. "$HOME/.cargo/env"
