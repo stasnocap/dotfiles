@@ -3,6 +3,6 @@
 sudo pacman -S --noconfirm --needed stow tmux
 
 # Define the folders
-export STOW_FOLDERS="alacritty,bash,hypr,nvim,omarchy,starship,tmux,waybar"
+export STOW_FOLDERS="alacritty,bash,hypr,nvim,omarchy,starship,tmux,herdr,waybar"
 
 ./stow
