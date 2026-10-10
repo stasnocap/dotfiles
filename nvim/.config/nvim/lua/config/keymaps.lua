@@ -2,6 +2,9 @@
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
 
+-- foot reports Shift+; via the kitty keyboard protocol and nvim doesn't resolve it to ':'
+vim.keymap.set({ "n", "x", "o", "i", "c" }, "<S-;>", ":", { noremap = true })
+
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Open diagnostic [Q]uickfix list" })
 vim.api.nvim_create_autocmd("TextYankPost", {
