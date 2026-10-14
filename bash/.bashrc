@@ -19,5 +19,15 @@ source "$OMARCHY_PATH/default/bash/rc"
 # Make an alias for invoking commands you use constantly
 # alias p='python'
 
+# Save each command to ~/.bash_history immediately (herdr shells rarely exit)
+__save_history() { history -a; }
+starship_precmd_user_func=__save_history
+
+# Ctrl+R: load other panes' history before fzf search
+if declare -F __fzf_history__ &> /dev/null; then
+  eval "__fzf_history_orig__() $(declare -f __fzf_history__ | tail -n +2)"
+  __fzf_history__() { history -n; __fzf_history_orig__; }
+fi
+
 bind '"\C-f":"tmux-sessionizer\n"'
 . "$HOME/.cargo/env"
