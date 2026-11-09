@@ -81,8 +81,8 @@ pane_scrollbars = false
 # kill-window and kill-session never asked
 confirm_close = false
 
-# automatic-rename gave windows a name without prompting
 prompt_new_tab_name = false
+# automatic-rename gave windows a name without prompting
 
 # set -g mouse on
 mouse_capture = true
@@ -95,3 +95,58 @@ tab_bar_right = [{ type = "zoom" }, { type = "hostname" }]
 # and it resolves on the server so remote sessions name the remote host.
 window_title = "{hostname}: {workspace}"
 agent_panel_sort = "spaces"
+
+[[keys.command]]
+key = "prefix+f"
+type = "plugin_action"
+command = "sessionizer.open"
+description = "open project workspace"
+
+[[keys.command]]
+key = "prefix+up"
+type = "plugin_action"
+command = "sessionizer.worktree-open"
+description = "open worktree workspace"
+
+[[keys.command]]
+key = "prefix+down"
+type = "plugin_action"
+command = "sessionizer.close"
+description = "close or remove workspaces"
+
+
+[[keys.command]]
+key = "prefix+shift+n"
+type = "shell"
+command = "herdr workspace focus 1"
+description = "Switch to NSI workspace"
+
+[[keys.command]]
+key = "prefix+shift+e"
+type = "shell"
+command = "herdr workspace focus 2"
+description = "Switch to minfing workspace"
+
+[[keys.command]]
+key = "prefix+shift+l"
+type = "shell"
+command = "herdr workspace focus 3"
+description = "Switch to BudRev workspace"
+
+[[keys.command]]
+key = "prefix+shift+u"
+type = "shell"
+command = "herdr workspace focus 4"
+description = "Switch to IdentityProvider workspace"
+
+[[keys.command]]
+key = "prefix+shift+y"
+type = "shell"
+command = "herdr workspace focus 5"
+description = "Switch to GeneralWebServices workspace"
+
+[[keys.command]]
+key = "prefix+shift+i"
+type = "shell"
+command = "herdr workspace focus 6"
+description = "Switch to dotofficeE workspace"
