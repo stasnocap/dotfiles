@@ -1,0 +1,25 @@
+{
+  "attribution": {
+    "commit": "",
+    "pr": "",
+    "sessionUrl": false
+  },
+  "model": "sonnet",
+  "modelSettings": {
+    "claude-sonnet-5-5": {
+      "effortLevel": "low"
+    },
+    "claude-opus-5-5": {
+      "effortLevel": "low"
+    },
+    "claude-fable-5-2": {
+      "effortLevel": "low"
+    }
+  },
+  "theme": "dark",
+  "autoContinueAtUsageLimit": true,
+  "statusLine": {
+    "type": "command",
+    "command": "~/.claude/statusline.sh"
+  }
+}
