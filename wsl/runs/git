@@ -6,3 +6,4 @@ git config --global user.name stasnocap
 git config --global user.email stasnocap@gmail.com
 git config --global core.editor nvim
 git config --global pull.rebase true
+git config --global rebase.autoStash true
