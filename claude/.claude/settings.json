@@ -5,6 +5,10 @@
     "sessionUrl": false
   },
   "model": "sonnet",
+  "statusLine": {
+    "type": "command",
+    "command": "~/.claude/statusline.sh"
+  },
   "modelSettings": {
     "claude-sonnet-5-5": {
       "effortLevel": "low"
@@ -17,9 +21,5 @@
     }
   },
   "theme": "dark",
-  "autoContinueAtUsageLimit": true,
-  "statusLine": {
-    "type": "command",
-    "command": "~/.claude/statusline.sh"
-  }
+  "autoContinueAtUsageLimit": true
 }
